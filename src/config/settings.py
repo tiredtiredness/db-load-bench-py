@@ -21,4 +21,5 @@ def get_mysql_config():
         "host": os.getenv("MYSQL_HOST"),
         "port": int(os.getenv("MYSQL_PORT")),
         "database": os.getenv("MYSQL_DATABASE"),
+        "allow_local_infile": True,
     }

@@ -16,7 +16,11 @@ class BaseDatabase(ABC):
         pass
 
     @abstractmethod
-    def default_insert(self):
+    def prepare(self, cursor, csv_file, table_name):
+        pass
+
+    @abstractmethod
+    def default_insert(self, csv_file: str, table_name: str) -> int:
         pass
 
     @abstractmethod
