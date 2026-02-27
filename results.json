@@ -1,0 +1,52 @@
+{
+  "MySQL": {
+    "bulk_insert": [
+      {
+        "rows": 1000000,
+        "elapsed": 7.6785940829940955,
+        "rps": 130232.2,
+        "batch_size": 10000
+      },
+      {
+        "rows": 1000000,
+        "elapsed": 9.839919291996921,
+        "rps": 101626.8,
+        "batch_size": 1000
+      },
+      {
+        "rows": 1000000,
+        "elapsed": 34.16650354200101,
+        "rps": 29268.4,
+        "batch_size": 100
+      },
+      {
+        "rows": 1000000,
+        "elapsed": 34.099499458003265,
+        "rps": 29325.9,
+        "batch_size": 100
+      }
+    ],
+    "file_insert": [
+      {
+        "rows": 1000000,
+        "elapsed": 1.8026412910039653,
+        "rps": 554741.5,
+        "batch_size": null
+      }
+    ],
+    "default_insert": [
+      {
+        "rows": 1000000,
+        "elapsed": 46.991784166995785,
+        "rps": 21280.3,
+        "batch_size": null
+      },
+      {
+        "rows": 100,
+        "elapsed": 0.014085208997130394,
+        "rps": 7099.6,
+        "batch_size": null
+      }
+    ]
+  }
+}

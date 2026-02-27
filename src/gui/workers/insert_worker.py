@@ -44,6 +44,16 @@ class InsertWorker(QThread):
             self.log_message.emit("Таблица готова", "SUCCESS")
 
             self.log_message.emit(f"Запуск {method}...", "INFO")
+
+            start_idle = time.perf_counter()
+            cursor = db.connection.cursor()
+            cursor.execute("SELECT 1")
+            cursor.fetchone()  # ← обязательно для MySQL
+            overhead = time.perf_counter() - start_idle
+            cursor.close()  # ← не забываем закрыть
+
+            print(overhead)
+
             start = time.perf_counter()
 
             if method == "bulk_insert":
@@ -51,7 +61,7 @@ class InsertWorker(QThread):
             else:
                 rows = insert_fn(csv_file, table)
 
-            elapsed = time.perf_counter() - start
+            elapsed = time.perf_counter() - start - overhead
 
             self.log_message.emit(
                 f"Вставлено {rows} строк за {elapsed:.2f}с", "SUCCESS"
