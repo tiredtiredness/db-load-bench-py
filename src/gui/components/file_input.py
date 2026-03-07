@@ -20,9 +20,10 @@ class FileInput(QWidget):
         super().__init__(parent)
 
         self.label = QLabel(label)
+
         self.input = QLineEdit()
         self.input.setPlaceholderText("Путь к файлу...")
-        self.input.setReadOnly(True)
+        self.input.editingFinished.connect(self._manual_input)
 
         self.button = QPushButton("Выбрать")
         self.button.clicked.connect(self._open_dialog)
@@ -37,16 +38,31 @@ class FileInput(QWidget):
 
     def _open_dialog(self):
         downloads = str(Path.home() / "Downloads")
+
         path, _ = QFileDialog.getOpenFileName(
             self,
             "Выберите файл",
             downloads,
             "CSV Files (*.csv);;All Files (*)",
         )
+
         if path:
             self.input.setText(path)
             self.file_selected.emit(path)
             self.log_message.emit(f"Выбран файл: {path}", "INFO")
+
+    def _manual_input(self):
+        """Обработка ручного ввода пути"""
+        path = self.input.text().strip()
+
+        if not path:
+            return
+
+        if Path(path).exists():
+            self.file_selected.emit(path)
+            self.log_message.emit(f"Путь к файлу: {path}", "INFO")
+        else:
+            self.log_message.emit(f"Файл не найден: {path}", "ERROR")
 
     def get_path(self) -> str:
         return self.input.text()

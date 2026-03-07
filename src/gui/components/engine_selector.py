@@ -3,7 +3,8 @@ from PyQt6.QtCore import pyqtSignal
 
 
 ENGINE_CONFIGS = {
-    "Python": "PYTHON",
+    "Python": "Python",
+    "Go": "Go",
 }
 
 
