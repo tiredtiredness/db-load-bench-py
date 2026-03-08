@@ -1753,5 +1753,245 @@
       "elapsed": 0.023417917000188027,
       "rps": 42702.3
     }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.050016,
+      "rps": 19993.4
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.06103,
+      "rps": 16385.4
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.07755345800251234,
+      "rps": 12894.3
+    }
+  },
+  {
+    "engine": "Go",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.058278958,
+      "rps": 17158.8517419958
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.106645958,
+      "rps": 9376.8
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.068042,
+      "rps": 14696.8
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.014559,
+      "rps": 68685.1
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.040061333,
+      "rps": 24961.7
+    }
+  },
+  {
+    "engine": "Go",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.022030667,
+      "rps": 45391.2720844993
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.025471374996413942,
+      "rps": 39259.8
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.027608917000179645,
+      "rps": 36220.2
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.02535445900139166,
+      "rps": 39440.8
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.00995,
+      "rps": 100505.9
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.013798,
+      "rps": 72476.0
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.014065,
+      "rps": 71098.5
+    }
+  },
+  {
+    "engine": "Rust",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.013429,
+      "rps": 74466.6
+    }
   }
 ]

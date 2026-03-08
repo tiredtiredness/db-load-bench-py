@@ -2,11 +2,7 @@ from PyQt6.QtWidgets import QWidget, QFormLayout, QComboBox
 from PyQt6.QtCore import pyqtSignal
 
 
-ENGINE_CONFIGS = {
-    "Python": "Python",
-    "Go": "Go",
-    "Java": "Java",
-}
+ENGINE_CONFIGS = {"Python": "Python", "Go": "Go", "Java": "Java", "Rust": "Rust"}
 
 
 class EngineSelector(QWidget):
