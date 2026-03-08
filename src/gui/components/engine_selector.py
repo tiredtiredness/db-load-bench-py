@@ -5,6 +5,7 @@ from PyQt6.QtCore import pyqtSignal
 ENGINE_CONFIGS = {
     "Python": "Python",
     "Go": "Go",
+    "Java": "Java",
 }
 
 

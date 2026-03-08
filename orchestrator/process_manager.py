@@ -9,6 +9,7 @@ from orchestrator.protocol import MethodRun
 ENGINES = {
     "Python": [sys.executable, str(Path("engines/python/main.py"))],
     "Go": [str(Path("engines/go/insert_engine"))],
+    "Java": ["java", "-jar", str(Path("engines/java/target/insert_engine.jar"))],
 }
 
 

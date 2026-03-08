@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"time"
 )
 
 type Result struct {
@@ -14,6 +15,13 @@ type Result struct {
 	ExperimentConfig map[string]int         `json:"experiment_config"`
 	MethodConfig     map[string]interface{} `json:"method_config"`
 	Metrics          map[string]float64     `json:"metrics"`
+}
+
+type Inserter interface {
+	DefaultInsert(csvFile, tableName string) (int, error)
+	BulkInsert(csvFile, tableName string, batchSize int) (int, error)
+	FileInsert(csvFile, tableName string) (int, error)
+	Close()
 }
 
 func main() {
@@ -34,14 +42,51 @@ func main() {
 		os.Exit(1)
 	}
 
-	inserter, err := NewInserter(*dbType, *host, *port, *user, *password, *database)
+	params := ConnParams{
+		Host:     *host,
+		Port:     *port,
+		User:     *user,
+		Password: *password,
+		Database: *database,
+	}
+
+	var inserter Inserter
+	var err     error
+
+	switch *dbType {
+	case "mysql":
+		inserter, err = NewMySQLInserter(params)
+	case "postgresql":
+		inserter, err = NewPgSQLInserter(params)
+	default:
+		fmt.Fprintf(os.Stderr, "unsupported db type: %s\n", *dbType)
+		os.Exit(1)
+	}
+
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "connection error:", err)
 		os.Exit(1)
 	}
 	defer inserter.Close()
 
-	rows, elapsed, err := inserter.Run(*method, *csvFile, *tableName, *batchSize)
+	start := time.Now()
+
+	var rows int
+
+	switch *method {
+	case "default_insert":
+		rows, err = inserter.DefaultInsert(*csvFile, *tableName)
+	case "bulk_insert":
+		rows, err = inserter.BulkInsert(*csvFile, *tableName, *batchSize)
+	case "file_insert":
+		rows, err = inserter.FileInsert(*csvFile, *tableName)
+	default:
+		fmt.Fprintf(os.Stderr, "unknown method: %s\n", *method)
+		os.Exit(1)
+	}
+
+	elapsed := time.Since(start).Seconds()
+
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "insert error:", err)
 		os.Exit(1)

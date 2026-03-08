@@ -1528,5 +1528,230 @@
       "elapsed": 0.016331084,
       "rps": 61232.922444094955
     }
+  },
+  {
+    "engine": "Python",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.08850299999903655,
+      "rps": 11299.1
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.07708120800089091,
+      "rps": 12973.3
+    }
+  },
+  {
+    "engine": "Go",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.057561042,
+      "rps": 17372.86131825063
+    }
+  },
+  {
+    "engine": "Go",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.067234334,
+      "rps": 14873.353248356709
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.126337625,
+      "rps": 7915.3
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.113523166,
+      "rps": 8808.8
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.117643667,
+      "rps": 8500.2
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.138118916,
+      "rps": 7240.1
+    }
+  },
+  {
+    "engine": "Java",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.102363416,
+      "rps": 9769.1
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "mysql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.08231166699988535,
+      "rps": 12148.9
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "mysql",
+    "method": "bulk_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": 1000
+    },
+    "metrics": {
+      "elapsed": 0.033694666002702434,
+      "rps": 29678.3
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "mysql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.02462979100528173,
+      "rps": 40601.2
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "default_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.07699233400489902,
+      "rps": 12988.3
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "bulk_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": 1000
+    },
+    "metrics": {
+      "elapsed": 0.0358113330003107,
+      "rps": 27924.1
+    }
+  },
+  {
+    "engine": "Python",
+    "db_type": "postgresql",
+    "method": "file_insert",
+    "experiment_config": {
+      "rows": 1000
+    },
+    "method_config": {
+      "batch_size": null
+    },
+    "metrics": {
+      "elapsed": 0.023417917000188027,
+      "rps": 42702.3
+    }
   }
 ]
